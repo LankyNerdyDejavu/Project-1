@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TTT</title>
+    <link rel="stylesheet" href="Revise3.css">
+    <style>
+        #background {
+            background-image: url('https://image.slidesharecdn.com/tictactoe-210615123049/85/tic-tac-toe-1-320.jpg?cb=1668060170');
+            background-size: auto;
+            background-repeat: repeat;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            z-index: -1;
+            background-position: 0px 0px; 
+        }
+    </style>
+</head>
+<body>
+    <div id="background"></div>
+    <div class="center">
+        <button class="btnn"><a href="Tic Tac Toe.html">Play</a></button>
+        <br>
+        <br>
+        <button class="btnn"><a href="Revise1.html">Log Out</a></button>
+    </div>
+    <script>
+        window.onload = function() {
+            var bg = document.getElementById('background');
+            var currentX = 0;
+            var currentY = 0;
+
+            setInterval(function() {
+                currentX -= 2;
+                currentY += 2;
+                bg.style.backgroundPosition = currentX + 'px ' + currentY + 'px';
+            }, 50);
+        };
+    </script>
+</body>
+</html>

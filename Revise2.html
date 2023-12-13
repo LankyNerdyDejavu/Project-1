@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="Revise2.css">
+    <style>
+        /* Add the styles for the background animation here */
+        #background {
+            background-image: url('https://image.slidesharecdn.com/tictactoe-210615123049/85/tic-tac-toe-1-320.jpg?cb=1668060170');
+            background-size: auto;
+            background-repeat: repeat;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            z-index: -1;
+            background-position: 0px 0px; 
+        }
+    </style>
+</head>
+<body>
+    <div id="background"></div>
+    <div class="center">
+        <h1>Sign Up</h1>
+        <form method="post">
+            <div class="txt_field">
+                <input type="text" required>
+                <span></span>
+                <label>Username</label>
+            </div>
+
+            <div class="txt_field">
+                <input type="password" required>
+                <span></span>
+                <label>Password</label>
+            </div>
+
+            <div class="pass">Forgot Password?</div>
+            <button class="btnn"><a href="Revise1.html">Create Account</a></button>
+            <div class="signup_link">
+                Do you already have an account?<a href="Revise1.html"> Login</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Add the provided JavaScript code for the background animation here
+        window.onload = function() {
+            var bg = document.getElementById('background');
+            var currentX = 0;
+            var currentY = 0;
+
+            setInterval(function() {
+                currentX -= 2;
+                currentY += 2;
+                bg.style.backgroundPosition = currentX + 'px ' + currentY + 'px';
+            }, 50);
+        };
+    </script>
+</body>
+</html>
